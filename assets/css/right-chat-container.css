@@ -1,0 +1,16 @@
+  /******************* RIGHT CHAT CONTAINER STYLE *******************/
+
+  .contact-info{
+    height: 70px;
+    background-color: rgb(234, 234, 234);
+}
+
+.conversation-container{
+    height: calc(100% - (70px + 70px));
+    background-image: url(../img/mine.jpg);
+}
+
+.send-message-section{
+    height: 70px;
+    background-color: rgb(234, 234, 234);
+}

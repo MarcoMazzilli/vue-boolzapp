@@ -1,0 +1,150 @@
+ /******************* LEFT ASIDE STYLE *******************/
+
+ /****** PERSONAL-INFO ******/
+ .personal-info{
+    height: 70px;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-right: 2px solid rgb(255, 0, 0);
+   }
+
+.personal-info .avatar-container{
+   width: 50%;
+   display: flex;
+   align-items: center;
+}
+
+.personal-info .avatar-container span {
+   margin-left: 10px;
+}
+
+.personal-info .icons-container{
+   width: 50%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 20px;
+}
+
+.personal-info .icons-container i {
+   font-size: 1.5rem;
+   color: rgb(177, 177, 177);
+}
+
+/****** TOGGLE MESSAGE NOTIFICATION ******/
+.toggle-message-notification{
+   height: 80px;
+   background-color:rgb(142, 218, 252);
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   gap: 8px;
+}
+
+.toggle-message-notification .notification-bell-icon {
+   background-color: rgb(242, 251, 255);
+   border-radius: 50%;
+   aspect-ratio: 1/1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.toggle-message-notification .notification-bell-icon i {
+   font-size: 1.3rem;
+   color: rgb(142, 218, 252);
+   padding: 12px;
+}
+
+.toggle-message-notification .notification-messages span:first-child{
+   display: block;
+   font-weight: 600;
+}
+
+.toggle-message-notification .notification-messages span:last-child{
+   display: block;
+   font-size: .9rem;
+   color: grey;
+   text-decoration: underline;
+}
+
+/****** SEARCH CHAT INPUT ******/
+.search-chat-input{
+   height: 50px;
+   background-color:rgb(234, 234, 234);
+   padding: 10px;
+   display: flex;
+}
+
+.search-chat-input .search-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+   height: 30px;
+   border-right: 1px solid rgb(234, 234, 234);
+}
+
+.search-chat-input .search-button i {
+   color: gray;
+   cursor: pointer;
+   padding: 0 25px;
+}
+
+.search-chat-input .search-input {
+   width: 100%;
+}
+
+.search-chat-input .search-input input {
+   border: none;
+   height: 30px;
+   padding: 5px;
+   width: 100%;
+}
+
+/****** CONVERSATION LIST ******/
+.conversation-list{
+   height: calc(100% - (50px + 80px + 70px));
+   overflow-y: scroll;
+}
+
+.conversation-list .user-tab {
+   display: flex;
+   height: 80px;
+   padding: 10px;
+   border-top: 1px solid rgb(234, 234, 234);
+}
+.conversation-list .user-tab:hover{
+   background-color: rgb(233, 235, 235);
+}
+
+.conversation-list .user-tab .user-avatar {
+   width: 80px;
+}
+
+.conversation-list .user-tab .user-info {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.conversation-list .user-tab .user-info span:first-child{
+   margin-bottom: 5px;
+}
+
+.conversation-list .user-tab .user-info span:last-child{
+   color: gray;
+   font-size: .8rem;
+}
+
+.conversation-list .user-tab .last-access {
+   width: 50px;
+   text-align: end;
+}
+
+.conversation-list .user-tab .last-access span {
+   color: gray;
+   font-size: .7rem;
+}
