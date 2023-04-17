@@ -3,3 +3,67 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    width: 100;
+}
+
+.b1 {
+    border: 1px solid black;
+}
+
+ /******************* MAIN STYLE *******************/
+
+.main-wrapper {
+    height: 100vh;
+    background: rgb(217,219,212);
+    background: linear-gradient(0deg, rgba(217,219,212,1) 85%, rgba(0,150,136,1) 85%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: bisque;
+    width: 80%;
+    height: 95%;
+    display: flex;
+}
+
+.left-aside{
+    width: 35%;
+    height: 100%;
+    background-color: royalblue;
+    color: black;
+}
+
+.right-chat-container{
+    width: 65%;
+    height: 100%;
+    background-color: brown;
+    color: black;
+}
+
+ /******************* LEFT ASIDE STYLE *******************/
+
+ .personal-info{
+    height: 70px;
+    background-color: rgb(234, 234, 234);
+ }
+ .toggle-message-notification{
+    height: 80px;
+    background-color:rgb(142, 218, 252);
+ }
+ .search-chat-input{
+    height: 50px;
+    background-color:rgb(234, 234, 234);
+ }
+ .conversation-list{
+    height: calc(100% - (50px + 80px + 70px));
+    background-color: aquamarine;
+    overflow-y: scroll;
+ }
+
+  /******************* LEFT ASIDE STYLE *******************/
+
+
