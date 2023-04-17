@@ -5,12 +5,18 @@
 }
 
 img {
-    width: 100;
+    max-width: 100%;
+    height: 100%;
 }
 
 .b1 {
     border: 1px solid black;
 }
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+ }
 
  /******************* MAIN STYLE *******************/
 
@@ -33,31 +39,61 @@ img {
 .left-aside{
     width: 35%;
     height: 100%;
-    background-color: royalblue;
     color: black;
 }
 
 .right-chat-container{
     width: 65%;
     height: 100%;
-    background-color: brown;
     color: black;
 }
 
  /******************* LEFT ASIDE STYLE *******************/
 
+ /* PERSONAL-INFO */
  .personal-info{
-    height: 70px;
-    background-color: rgb(234, 234, 234);
- }
+     height: 70px;
+     background-color: rgb(234, 234, 234);
+     display: flex;
+     justify-content: space-between;
+     padding: 5px;
+     border-right: 2px solid rgb(255, 0, 0);
+    }
+
+.personal-info .avatar-container{
+    width: 50%;
+}
+
+.personal-info .avatar-container span {
+    margin-left: 10px;
+}
+
+.personal-info .icons-container{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.personal-info .icons-container i {
+    font-size: 1.5rem;
+    color: rgb(177, 177, 177);
+}
+
+
+
+    /* PERSONAL-INFO */
  .toggle-message-notification{
     height: 80px;
     background-color:rgb(142, 218, 252);
  }
+
  .search-chat-input{
     height: 50px;
     background-color:rgb(234, 234, 234);
  }
+
  .conversation-list{
     height: calc(100% - (50px + 80px + 70px));
     background-color: aquamarine;
@@ -70,10 +106,12 @@ img {
     height: 70px;
     background-color: rgb(234, 234, 234);
 }
+
 .conversation-container{
     height: calc(100% - (70px + 70px));
     background-image: url(../img/mine.jpg);
 }
+
 .send-message-section{
     height: 70px;
     background-color: rgb(234, 234, 234);
