@@ -45,13 +45,36 @@
     color: rgb(177, 177, 177);
 }
 
-/**** CONVERSATION CONTAINER ****/
+/********************
+ CONVERSATION CONTAINER 
+ ********************/
 .conversation-container{
     height: calc(100% - (70px + 70px));
     background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
-/* SEND MESSAGE ACTION */
+.conversation-container .message {
+    background-color: rgb(255, 255, 255);
+    margin: 10px 50px;
+    padding: 15px;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.conversation-container .message.sent{
+    background-color: rgb(213, 249, 186);
+    align-self: flex-end;
+}
+
+
+
+
+/*****************
+ SEND MESSAGE ACTION 
+ *****************/
 .send-message-section{
     height: 70px;
     background-color: rgb(234, 234, 234);
