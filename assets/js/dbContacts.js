@@ -42,7 +42,7 @@ export default [
     },
     {
         ContactName: 'Claudia',
-        avatar: './img/avatar_5.png',
+        avatar: './img/avatar_6.png',
         visible: true,
         messages: "",
     },
