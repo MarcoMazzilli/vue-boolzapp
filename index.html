@@ -104,9 +104,8 @@
             </div>
 
             <div class="conversation-container">
-                <div class="message sent">Ciaone</div>
-                <div class="message sent">Ciaone</div>
-                <div class="message">Ciaone a te!</div>
+                <div v-for="messaggio in contactsArray[clickedThumb].messages" class="message" :class="messaggio.status">{{messaggio.textMessage}}</div>
+
             </div>
             <div class="send-message-section">send-message-section</div>
         </div>
