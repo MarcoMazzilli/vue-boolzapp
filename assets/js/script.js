@@ -7,7 +7,7 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            message: "Click to show array in console",
+        contactsArray,
         }
     },
     methods:{

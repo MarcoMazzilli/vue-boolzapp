@@ -1,61 +1,101 @@
 export default [
     {
         ContactName: 'Michele',
-        contactProfilePic: './img/avatar_1.png',
+        profilePic: 'assets/img/avatar_1.jpg',
         visible: true,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                date: '10/01/2020 16:15:22',
+                textMessage: 'Tutto fatto!',
+                status: 'received'
             },
             {
-                date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
-                status: 'received'
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
             }
         ]
     },
     {
         ContactName: 'Fabio',
-        contactProfilePic: './img/avatar_2.png',
+        profilePic: 'assets/img/avatar_2.jpg',
         visible: true,
-        messages: "",
+        messages: [
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ],
     },
     {
         ContactName: 'Samuele',
-        contactProfilePic: './img/avatar_3.png',
+        profilePic: 'assets/img/avatar_3.jpg',
         visible: true,
-        messages: "",
+        messages: [
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ],
     },
     {
         ContactName: 'Alessandro B.',
-        contactProfilePic: './img/avatar_4.png',
+        profilePic: 'assets/img/avatar_4.jpg',
         visible: true,
-        messages:"",
+        messages:[
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ]
     },
     {
         ContactName: 'Alessandro L.',
-        contactProfilePic: './img/avatar_5.png',
+        profilePic: 'assets/img/avatar_5.jpg',
         visible: true,
-        messages: "",
+        messages: [
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ],
     },
     {
         ContactName: 'Claudia',
-        avatar: './img/avatar_6.png',
+        profilePic: 'assets/img/avatar_6.jpg',
         visible: true,
-        messages: "",
+        messages: [
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ],
     },
     {
         ContactName: 'Federico',
-        contactProfilePic: './img/avatar_7.png',
+        profilePic: 'assets/img/avatar_7.jpg',
         visible: true,
-        messages:"",
+        messages:[            {
+            date: '10/01/2020 15:30:55',
+            textMessage: 'Hai portato a spasso il cane?',
+            status: 'sent'
+        },],
     },
     {
         ContactName: 'Davide',
-        contactProfilePic: './img/avatar_8.png',
+        profilePic: 'assets/img/avatar_8.jpg',
         visible: true,
-        messages: "",
+        messages: [
+            {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+        ],
     }
 ]

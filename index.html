@@ -60,24 +60,21 @@
             <!-- conversation-list -->
             <div class="conversation-list">
 
-                <div class="user-tab">
+                <div class="user-tab" v-for="contact in contactsArray">
                     <!-- avatar -->
                     <div class="user-avatar">
-                        <img class="avatar" src="assets/img/avatar_1.jpg" alt="">
+                        <img class="avatar" :src="contact.profilePic" alt="">
                     </div>
-
                     <!-- info -->
                     <div class="user-info">
-                        <span>Nome</span>
-                        <span>Ultimo messaggio inviato</span>
+                        <span>{{contact.ContactName}}</span>
+                        <span>{{contact.messages[0].textMessage}}</span>
                     </div>
-
                     <!-- last access -->
                     <div class="last-access">
-                        <span>12:00</span>
+                        <span>{{contact.messages[0].date}}</span>
                     </div>
                 </div>
-
 
             </div>
         </div>
