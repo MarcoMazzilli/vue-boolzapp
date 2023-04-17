@@ -50,7 +50,7 @@ img {
 
  /******************* LEFT ASIDE STYLE *******************/
 
- /* PERSONAL-INFO */
+ /****** PERSONAL-INFO ******/
  .personal-info{
      height: 70px;
      background-color: rgb(234, 234, 234);
@@ -81,19 +81,50 @@ img {
     color: rgb(177, 177, 177);
 }
 
-
-
-    /* PERSONAL-INFO */
+/****** TOGGLE MESSAGE NOTIFICATION ******/
  .toggle-message-notification{
     height: 80px;
     background-color:rgb(142, 218, 252);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 8px;
  }
 
+ .toggle-message-notification .notification-bell-icon {
+    background-color: rgb(242, 251, 255);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .toggle-message-notification .notification-bell-icon i {
+    font-size: 1.3rem;
+    color: rgb(142, 218, 252);
+    padding: 12px;
+ }
+
+ .toggle-message-notification .notification-messages span:first-child{
+    display: block;
+    font-weight: 600;
+ }
+
+ .toggle-message-notification .notification-messages span:last-child{
+    display: block;
+    font-size: .9rem;
+    color: grey;
+    text-decoration: underline;
+ }
+
+/****** SEARCH CHAT INPUT ******/
  .search-chat-input{
     height: 50px;
     background-color:rgb(234, 234, 234);
  }
 
+/****** CONVERSATION LIST ******/
  .conversation-list{
     height: calc(100% - (50px + 80px + 70px));
     background-color: aquamarine;
