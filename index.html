@@ -62,7 +62,7 @@
             <!-- conversation-list -->
             <div class="conversation-list">
 
-                <div class="user-tab" v-for="contact in contactsArray">
+                <div class="user-tab" v-for="(contact, index) in contactsArray" @click="changeTopBar(index)">
                     <!-- avatar -->
                     <div class="user-avatar">
                         <img class="avatar" :src="contact.profilePic" alt="">
@@ -83,12 +83,28 @@
         
         <!-- RIGHT SIDE -->
         <div class="right-chat-container">
-            
+            <!-- contact info -->
             <div class="contact-info">
 
+                <div class="user-avatar">
+                    <img class="avatar" :src="contactsArray[clickedThumb].profilePic" alt="">
+                </div>
+
+                <div class="user-info">
+                    <span>{{contactsArray[clickedThumb].ContactName}}</span>
+                    <span>Ultimo accesso oggi alle 12:00</span>
+                </div>
+
+                <div class="icons-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+
             </div>
-            <div class="conversation-container b1">conversation-container</div>
-            <div class="send-message-section b1">send-message-section</div>
+
+            <div class="conversation-container">conversation-container</div>
+            <div class="send-message-section">send-message-section</div>
         </div>
 
 

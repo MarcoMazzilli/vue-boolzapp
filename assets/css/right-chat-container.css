@@ -1,15 +1,57 @@
   /******************* RIGHT CHAT CONTAINER STYLE *******************/
 
-  .contact-info{
+  /**** CONTACT INFO ****/
+.contact-info{
     height: 70px;
     background-color: rgb(234, 234, 234);
+    display: flex;
 }
 
+/* user avatar */
+.contact-info .user-avatar {
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+}
+
+/* user info */
+.contact-info .user-info {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.contact-info .user-info span:last-child {
+    color: grey;
+    font-size: .9rem;
+}
+
+/* icons container */
+.contact-info .icons-container{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 20px;
+}
+
+.contact-info .icons-container i{
+    font-size: 1.5rem;
+    color: rgb(177, 177, 177);
+}
+
+/**** CONVERSATION CONTAINER ****/
 .conversation-container{
     height: calc(100% - (70px + 70px));
     background-image: url(../img/mine.jpg);
 }
 
+/* SEND MESSAGE ACTION */
 .send-message-section{
     height: 70px;
     background-color: rgb(234, 234, 234);

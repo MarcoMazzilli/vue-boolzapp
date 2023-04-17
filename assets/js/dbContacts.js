@@ -19,7 +19,7 @@ export default [
     {
         ContactName: 'Fabio',
         profilePic: 'assets/img/avatar_2.jpg',
-        visible: true,
+        visible: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -31,7 +31,7 @@ export default [
     {
         ContactName: 'Samuele',
         profilePic: 'assets/img/avatar_3.jpg',
-        visible: true,
+        visible: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -43,7 +43,7 @@ export default [
     {
         ContactName: 'Alessandro B.',
         profilePic: 'assets/img/avatar_4.jpg',
-        visible: true,
+        visible: false,
         messages:[
             {
                 date: '10/01/2020 15:30:55',
@@ -55,7 +55,7 @@ export default [
     {
         ContactName: 'Alessandro L.',
         profilePic: 'assets/img/avatar_5.jpg',
-        visible: true,
+        visible: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -67,7 +67,7 @@ export default [
     {
         ContactName: 'Claudia',
         profilePic: 'assets/img/avatar_6.jpg',
-        visible: true,
+        visible: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -79,7 +79,7 @@ export default [
     {
         ContactName: 'Federico',
         profilePic: 'assets/img/avatar_7.jpg',
-        visible: true,
+        visible: false,
         messages:[            {
             date: '10/01/2020 15:30:55',
             textMessage: 'Hai portato a spasso il cane?',
@@ -89,7 +89,7 @@ export default [
     {
         ContactName: 'Davide',
         profilePic: 'assets/img/avatar_8.jpg',
-        visible: true,
+        visible: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',

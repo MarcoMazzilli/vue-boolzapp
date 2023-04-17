@@ -8,11 +8,16 @@ createApp({
     data(){
         return{
         contactsArray,
+        clickedThumb: 0,
         }
     },
     methods:{
-        log(){
-            console.log(contactsArray)
+        log(contact,i){
+            console.log(contact,i)
+        },
+        changeTopBar(i){
+            this.clickedThumb = i ;
+            console.log(this.clickedThumb)
         }
     },
 }).mount("#app")
