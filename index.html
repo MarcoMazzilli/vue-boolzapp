@@ -107,7 +107,20 @@
                 <div v-for="messaggio in contactsArray[clickedThumb].messages" class="message" :class="messaggio.status">{{messaggio.textMessage}}</div>
 
             </div>
-            <div class="send-message-section">send-message-section</div>
+            <div class="send-message-section">
+
+                <div class="message-icon">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+
+                <div class="message-input">
+                    <input type="text" placeholder="Scrivi un messaggio">
+                </div>
+
+                <div class="message-icon">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
         </div>
 
 

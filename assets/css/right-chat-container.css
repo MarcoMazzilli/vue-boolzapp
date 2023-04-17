@@ -77,5 +77,42 @@
  *****************/
 .send-message-section{
     height: 70px;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(243, 238, 234);
+    display: flex;
+}
+
+.send-message-section .message-icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-message-section .message-icon i {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.send-message-section .message-icon:first-child i:hover {
+    font-size: 1.5rem;
+    color:orange;
+}
+
+.send-message-section .message-icon:last-child i:hover {
+    font-size: 1.5rem;
+    color:red;
+}
+
+.send-message-section .message-input {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.send-message-section .message-input input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 }
