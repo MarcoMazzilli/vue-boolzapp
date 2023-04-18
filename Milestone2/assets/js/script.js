@@ -27,7 +27,6 @@ createApp({
             console.log(this.clickedThumb)
         },
 
-//TODO: set time on messages 
         newSentMessage(){
             this.obj = {
                 date: {

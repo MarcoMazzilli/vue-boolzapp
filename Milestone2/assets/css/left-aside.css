@@ -122,6 +122,7 @@
 
 .conversation-list .user-tab .user-avatar {
    width: 80px;
+   flex-shrink: 0;
 }
 
 .conversation-list .user-tab .user-info {
@@ -137,6 +138,10 @@
 .conversation-list .user-tab .user-info span:last-child{
    color: gray;
    font-size: .8rem;
+   overflow: hidden;
+   white-space: nowrap;
+   max-width: 300px;
+   text-overflow: ellipsis;
 }
 
 .conversation-list .user-tab .last-access {

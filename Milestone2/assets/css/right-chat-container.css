@@ -64,6 +64,8 @@
     width: 20%;
     border-radius: 10px;
     position: relative;
+    min-width: 300px;
+    word-wrap: break-word;
 }
 
 .conversation-container .message.sent{
