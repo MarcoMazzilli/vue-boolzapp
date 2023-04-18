@@ -75,7 +75,7 @@
                     </div>
                     <!-- last access -->
                     <div class="last-access">
-                        <span>{{contact.messages[0].date}}</span>
+                        <span>{{contact.messages[0].date.dayDate}} {{contact.messages[0].date.dayTime}}</span>
                     </div>
                 </li>
 
@@ -114,7 +114,7 @@
                   class="message"
                   :class="messaggio.status">
                     {{messaggio.textMessage}}
-                    <span class="message-date">12:00</span>
+                    <span class="message-date">{{messaggio.date.dayTime}} <span>&check;&check;</span></span>
                 </div>
 
             </div>
