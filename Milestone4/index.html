@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoolzApp</title>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/right-chat-container.css">
+    <link rel="stylesheet" href="assets/css/left-aside.css">
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+    <!-- LUXON -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js' integrity='sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==' crossorigin='anonymous'></script>
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+<div class="main-wrapper">
+
+    <div class="main" id="app">
+        <!-- LEFT SIDE -->
+        <div class="left-aside">
+
+            <!-- personal-info -->
+            <div class="personal-info">
+                <div class="avatar-container">
+                    <img class="avatar" src="assets/img/avatar_io.jpg" alt="">
+                    <span>Sofia</span>
+                </div>
+                <div class="icons-container">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <!-- toggle-message-notification -->
+            <div class="toggle-message-notification">
+                <div class="notification-bell-icon"><i class="fa-solid fa-bell-slash"></i></div>
+                <div class="notification-messages">
+                    <span>Ricevi notifiche di nuovi messaggi</span>
+                    <span>Attiva notifiche desktop</span>
+                </div>
+            </div>
+            
+            <!-- search-chat-input -->
+            <div class="search-chat-input">
+
+                <div class="search-button">
+                    <i class="fa-solid fa-search" @click="searchConversation()"></i>
+                </div>
+
+                <div class="search-input">
+                    <input v-model="letterToSearch" type="text" placeholder="Cerca o inizia una nuova chat " @keyup="searchConversation()">
+                </div>
+
+            </div>
+
+            <!-- conversation-list -->
+            <div class="conversation-list">
+                <ul>
+
+                <li v-for="(contact, index) in contactsArray" @click="changeTopBar(index)">
+                  <div class="user-tab" v-if="contact.visible">
+                    <!-- avatar -->
+                    <div class="user-avatar">
+                        <img class="avatar" :src="contact.profilePic" alt="">
+                    </div>
+                    <!-- info -->
+                    <div class="user-info">
+                        <span>{{contact.ContactName}}</span>
+                        <span>{{contact.messages[contact.messages.length-1].textMessage}}</span>
+                    </div>
+                    <!-- last access -->
+                    <div class="last-access">
+                        <span>{{contact.messages[0].date.dayDate}} {{contact.messages[0].date.dayTime}}</span>
+                    </div>
+                  </div>
+                </li>
+
+                
+            </ul>
+            </div>
+        </div>
+        
+        <!-- RIGHT SIDE -->
+        <div class="right-chat-container">
+            <!-- contact info -->
+            <div class="contact-info">
+
+                <div class="user-avatar">
+                    <img class="avatar" :src="contactsArray[clickedThumb].profilePic" alt="">
+                </div>
+
+                <div class="user-info">
+                    <span>{{contactsArray[clickedThumb].ContactName}}</span>
+                    <span>Ultimo accesso oggi alle 12:00</span>
+                </div>
+
+                <div class="icons-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+
+            </div>
+
+            <!-- CONVERSATION CONTAINER -->
+            <div class="conversation-container">
+
+                <div
+                  v-for="messaggio in contactsArray[clickedThumb].messages"
+                  class="message"
+                  :class="messaggio.status">
+                    {{messaggio.textMessage}}
+                    <span class="message-date">{{messaggio.date.dayTime}} <span>&check;&check;</span></span>
+                </div>
+
+            </div>
+
+            <!-- INPUT NEW MESSAGE SECTION -->
+            <div class="send-message-section">
+                <!-- emoticon -->
+                <div class="message-icon">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <!-- input new message -->
+                <div class="message-input">
+                    <input v-model="newSentMessageInput" @keydown.enter="newSentMessage()" type="text" placeholder="Scrivi un messaggio">
+                </div>
+                <!-- vocal message icons -->
+                <div class="message-icon">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+    
+
+    <script src="assets/js/script.js" type="module"></script>
+
+</body>
+</html>

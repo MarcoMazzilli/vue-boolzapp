@@ -1,0 +1,146 @@
+  /******************* RIGHT CHAT CONTAINER STYLE *******************/
+
+  /**** CONTACT INFO ****/
+.contact-info{
+    height: 70px;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+}
+
+/* user avatar */
+.contact-info .user-avatar {
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+}
+
+/* user info */
+.contact-info .user-info {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.contact-info .user-info span:last-child {
+    color: grey;
+    font-size: .9rem;
+}
+
+/* icons container */
+.contact-info .icons-container{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 20px;
+}
+
+.contact-info .icons-container i{
+    font-size: 1.5rem;
+    color: rgb(177, 177, 177);
+}
+
+/********************
+ CONVERSATION CONTAINER 
+ ********************/
+.conversation-container{
+    height: calc(100% - (70px + 70px));
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.conversation-container .message {
+    background-color: rgb(255, 255, 255);
+    margin: 10px 50px;
+    padding: 15px;
+    padding-bottom: 5px;
+    width: 20%;
+    border-radius: 10px;
+    position: relative;
+    min-width: 300px;
+    word-wrap: break-word;
+}
+
+.conversation-container .message.sent{
+    background-color: rgb(213, 249, 186);
+    align-self: flex-end;
+}
+
+.conversation-container .message-date {
+    display: block;
+    text-align: end;
+    font-size: .7rem;
+    color: gray;
+}
+
+.conversation-container .message-date > span {
+    font-weight: 600;
+    animation-name: changeColor;
+    animation-duration: 1s;
+    color: rgb(40, 174, 252);
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes changeColor {
+    0% {
+        color : grey
+    }
+    100% {
+        color: grey;
+    }
+}
+
+
+
+
+/*****************
+ SEND MESSAGE ACTION 
+ *****************/
+.send-message-section{
+    height: 70px;
+    background-color: rgb(243, 238, 234);
+    display: flex;
+}
+
+.send-message-section .message-icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-message-section .message-icon i {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.send-message-section .message-icon:first-child i:hover {
+    font-size: 1.5rem;
+    color:orange;
+}
+
+.send-message-section .message-icon:last-child i:hover {
+    font-size: 1.5rem;
+    color:red;
+}
+
+.send-message-section .message-input {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.send-message-section .message-input input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
