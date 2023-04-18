@@ -1,3 +1,4 @@
+const dt = luxon.DateTime
 export default [
     {
         ContactName: 'Michele',
@@ -5,12 +6,18 @@ export default [
         visible: true,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
             {
-                date: '10/01/2020 16:15:22',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Tutto fatto!',
                 status: 'received'
             },
@@ -22,7 +29,10 @@ export default [
         visible: false,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
@@ -34,7 +44,10 @@ export default [
         visible: false,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
@@ -46,7 +59,10 @@ export default [
         visible: false,
         messages:[
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
@@ -58,7 +74,10 @@ export default [
         visible: false,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },    
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
@@ -70,7 +89,10 @@ export default [
         visible: false,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
@@ -81,7 +103,10 @@ export default [
         profilePic: 'assets/img/avatar_7.jpg',
         visible: false,
         messages:[            {
-            date: '10/01/2020 15:30:55',
+            date: {
+                dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                dayTime :dt.now().toFormat('HH'+':'+'mm')
+            },         
             textMessage: 'Hai portato a spasso il cane?',
             status: 'sent'
         },],
@@ -92,7 +117,10 @@ export default [
         visible: false,
         messages: [
             {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: 'Hai portato a spasso il cane?',
                 status: 'sent'
             },
