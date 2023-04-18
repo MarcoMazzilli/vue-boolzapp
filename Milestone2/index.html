@@ -61,8 +61,9 @@
 
             <!-- conversation-list -->
             <div class="conversation-list">
+                <ul>
 
-                <div class="user-tab" v-for="(contact, index) in contactsArray" @click="changeTopBar(index)">
+                <li class="user-tab" v-for="(contact, index) in contactsArray" @click="changeTopBar(index)">
                     <!-- avatar -->
                     <div class="user-avatar">
                         <img class="avatar" :src="contact.profilePic" alt="">
@@ -70,14 +71,16 @@
                     <!-- info -->
                     <div class="user-info">
                         <span>{{contact.ContactName}}</span>
-                        <span>{{contact.messages[0].textMessage}}</span>
+                        <span>{{contact.messages[contact.messages.length-1].textMessage}}</span>
                     </div>
                     <!-- last access -->
                     <div class="last-access">
                         <span>{{contact.messages[0].date}}</span>
                     </div>
-                </div>
+                </li>
 
+                
+            </ul>
             </div>
         </div>
         

@@ -24,6 +24,7 @@ createApp({
             console.log(this.clickedThumb)
         },
 
+//TODO: set time on messages 
         newSentMessage(){
             this.obj = {
                 date: '10/01/2020 15:30:55',
@@ -31,7 +32,16 @@ createApp({
                 status: 'sent'
             }
             this.contactsArray[this.clickedThumb].messages.push(this.obj)
-            this.newSentMessageInput = ""
+            this.newSentMessageInput = "",
+
+           setTimeout(() => {
+            this.obj = {
+                date: '10/01/2020 15:30:55',
+                textMessage: "ok",
+                status: 'recived'
+            }
+            this.contactsArray[this.clickedThumb].messages.push(this.obj)
+           }, 1000);
             console.log(this.contactsArray[this.clickedThumb]);
         }
     },
