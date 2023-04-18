@@ -1,6 +1,8 @@
 import contactsArray from "./dbContacts.js"
 const dt = luxon.DateTime
-console.log(dt);
+
+console.log(dt.now().toFormat('HH'+':'+'mm'));
+console.log(dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT))
 
 const {createApp} = Vue
 
@@ -28,7 +30,10 @@ createApp({
 //TODO: set time on messages 
         newSentMessage(){
             this.obj = {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :"", 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: this.newSentMessageInput,
                 status: 'sent'
             }
@@ -37,12 +42,15 @@ createApp({
             //auto answer
            setTimeout(() => {
             this.obj = {
-                date: '10/01/2020 15:30:55',
+                date: {
+                    dayDate :"", 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
                 textMessage: "ok",
                 status: 'recived'
             }
             this.contactsArray[this.clickedThumb].messages.push(this.obj)
-           }, 1000);
+           }, 2000);
             console.log(this.contactsArray[this.clickedThumb]);
         }
     },

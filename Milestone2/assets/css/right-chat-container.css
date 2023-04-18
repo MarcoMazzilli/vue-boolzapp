@@ -78,6 +78,23 @@
     color: gray;
 }
 
+.conversation-container .message-date > span {
+    font-weight: 600;
+    animation-name: changeColor;
+    animation-duration: 1s;
+    color: rgb(40, 174, 252);
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes changeColor {
+    0% {
+        color : grey
+    }
+    100% {
+        color: grey;
+    }
+}
+
 
 
 
