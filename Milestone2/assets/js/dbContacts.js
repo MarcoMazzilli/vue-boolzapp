@@ -14,12 +14,11 @@ export default [
                 status: 'sent'
             },
             {
-
                 date: {
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Tutto fatto!',
+                textMessage: 'Con te non ci parlo, da ora ti risponderò soltanto "ok".',
                 status: 'received'
             },
         ]
@@ -34,7 +33,23 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'Ciao come stai?',
+                status: 'sent'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Bene grazie! Stasera ci vediamo?',
+                status: 'received'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Mi piacerebbe ma devo andare a fare la spesa.',
                 status: 'sent'
             },
         ],
@@ -49,9 +64,26 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'La Marianna va in campagna',
+                status: 'recived'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Sicuro di non aver sbagliato chat?',
                 status: 'sent'
             },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Ah scusa!',
+                status: 'recived'
+            },
+            
         ],
     },
     {
@@ -64,8 +96,16 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'Lo sai che ha aperto una nuova pizzeria?',
                 status: 'sent'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Si, ma preferirei andare al cinema.',
+                status: 'recived'
             },
         ]
     },
@@ -79,8 +119,16 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },    
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'Ricordati di chiamare la nonna',
                 status: 'sent'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },    
+                textMessage: 'Va bene, stasera la sento',
+                status: 'recived'
             },
         ],
     },
@@ -94,7 +142,23 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'Ciao Claudia, hai novità?',
+                status: 'sent'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Non ancora',
+                status: 'recived'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'Nessuna nuova, buona nuova',
                 status: 'sent'
             },
         ],
@@ -103,14 +167,24 @@ export default [
         ContactName: 'Federico',
         profilePic: 'assets/img/avatar_7.jpg',
         visible: false,
-        messages:[            {
+        messages:[
+            {
             date: {
                 dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                 dayTime :dt.now().toFormat('HH'+':'+'mm')
             },         
-            textMessage: 'Hai portato a spasso il cane?',
+            textMessage: 'Fai gli auguri a Martina che è il suo compleanno!',
             status: 'sent'
-        },],
+            },
+            {
+            date: {
+                dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                dayTime :dt.now().toFormat('HH'+':'+'mm')
+            },         
+            textMessage: 'Grazie per avermelo ricordato, le scrivo subito!',
+            status: 'recived'
+            },
+        ],
     },
     {
         ContactName: 'Davide',
@@ -122,8 +196,24 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-                textMessage: 'Hai portato a spasso il cane?',
+                textMessage: 'Ciao, andiamo a mangiare la pizza stasera?',
+                status: 'recived'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                 status: 'sent'
+            },
+            {
+                date: {
+                    dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
+                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                },
+                textMessage: 'OK!',
+                status: 'recived'
             },
         ],
     }
