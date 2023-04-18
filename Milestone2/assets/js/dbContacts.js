@@ -14,14 +14,14 @@ export default [
                 status: 'sent'
             },
             {
-<<<<<<< HEAD
+
                 date: {
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-=======
+
                 date: dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT) + " " + dt.now().toFormat('HH'+':'+'mm'),
->>>>>>> 4a4937b5a11246580fe08472bf494cbd5e88c87e
+
                 textMessage: 'Tutto fatto!',
                 status: 'received'
             },
