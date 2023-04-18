@@ -19,9 +19,6 @@ export default [
                     dayDate :dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT), 
                     dayTime :dt.now().toFormat('HH'+':'+'mm')
                 },
-
-                date: dt.now().setLocale('it').toLocaleString(dt.DATE_SHORT) + " " + dt.now().toFormat('HH'+':'+'mm'),
-
                 textMessage: 'Tutto fatto!',
                 status: 'received'
             },
