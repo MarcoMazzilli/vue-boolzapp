@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="assets/css/left-aside.css">
     <!-- ICONS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
-    <!-- BOOTSTRAP -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"> -->
+    <!-- LUXON -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js' integrity='sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==' crossorigin='anonymous'></script>
     <!-- VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -108,9 +108,18 @@
 
             <!-- CONVERSATION CONTAINER -->
             <div class="conversation-container">
-                <div v-for="messaggio in contactsArray[clickedThumb].messages" class="message" :class="messaggio.status">{{messaggio.textMessage}}</div>
+
+                <div
+                  v-for="messaggio in contactsArray[clickedThumb].messages"
+                  class="message"
+                  :class="messaggio.status">
+                    {{messaggio.textMessage}}
+                    <span class="message-date">12:00</span>
+                </div>
 
             </div>
+
+            <!-- INPUT NEW MESSAGE SECTION -->
             <div class="send-message-section">
                 <!-- emoticon -->
                 <div class="message-icon">

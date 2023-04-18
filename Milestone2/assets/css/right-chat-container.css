@@ -60,13 +60,22 @@
     background-color: rgb(255, 255, 255);
     margin: 10px 50px;
     padding: 15px;
+    padding-bottom: 5px;
     width: 20%;
     border-radius: 10px;
+    position: relative;
 }
 
 .conversation-container .message.sent{
     background-color: rgb(213, 249, 186);
     align-self: flex-end;
+}
+
+.conversation-container .message-date {
+    display: block;
+    text-align: end;
+    font-size: .7rem;
+    color: gray;
 }
 
 

@@ -1,5 +1,6 @@
 import contactsArray from "./dbContacts.js"
-console.log("Hello world!")
+const dt = luxon.DateTime
+console.log(dt);
 
 const {createApp} = Vue
 
@@ -33,7 +34,7 @@ createApp({
             }
             this.contactsArray[this.clickedThumb].messages.push(this.obj)
             this.newSentMessageInput = "",
-
+            //auto answer
            setTimeout(() => {
             this.obj = {
                 date: '10/01/2020 15:30:55',
