@@ -5,15 +5,15 @@ export default [
         visible: true,
         messages: [
             {
+                date: '10/01/2020 15:30:55',
+                textMessage: 'Hai portato a spasso il cane?',
+                status: 'sent'
+            },
+            {
                 date: '10/01/2020 16:15:22',
                 textMessage: 'Tutto fatto!',
                 status: 'received'
             },
-            {
-                date: '10/01/2020 15:30:55',
-                textMessage: 'Hai portato a spasso il cane?',
-                status: 'sent'
-            }
         ]
     },
     {

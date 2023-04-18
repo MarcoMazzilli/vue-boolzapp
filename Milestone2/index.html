@@ -103,20 +103,21 @@
 
             </div>
 
+            <!-- CONVERSATION CONTAINER -->
             <div class="conversation-container">
                 <div v-for="messaggio in contactsArray[clickedThumb].messages" class="message" :class="messaggio.status">{{messaggio.textMessage}}</div>
 
             </div>
             <div class="send-message-section">
-
+                <!-- emoticon -->
                 <div class="message-icon">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
-
+                <!-- input new message -->
                 <div class="message-input">
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input v-model="newSentMessageInput" @keydown.enter="newSentMessage()" type="text" placeholder="Scrivi un messaggio">
                 </div>
-
+                <!-- vocal message icons -->
                 <div class="message-icon">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
