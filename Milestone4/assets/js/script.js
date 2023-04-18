@@ -61,9 +61,3 @@ createApp({
     },
 
 }).mount("#app")
-
-
-
-// if (contact.ContactName.includes(this.letterToSearch)) {
-//     contact.visible = false
-// }
