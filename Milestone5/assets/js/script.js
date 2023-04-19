@@ -13,12 +13,19 @@ createApp({
         newSentMessageInput :"",
         letterToSearch:"",
         lightTheme : true,
+        counterBackground : 0,
         }
     },
     methods:{
 
-        log(){
-            console.warn(this.lightTheme)
+        changeTheme(){
+            this.lightTheme = !this.lightTheme;
+            const css = document.querySelector('#dark-mode');
+            css.href = css.getAttribute('data-dark');
+
+            if (this.lightTheme) {
+                css.href = css.getAttribute('data-light');
+            }
         },
 
         changeTopBar(i){
@@ -65,4 +72,4 @@ createApp({
         }
     },
 
-}).mount("#app")
+}).mount('#app')

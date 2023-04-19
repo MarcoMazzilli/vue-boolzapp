@@ -7,8 +7,11 @@
     <title>BoolzApp</title>
     <!-- STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- chooseTheme -->
-    <link rel="stylesheet" :href="lightTheme ?'assets/css/colorLightMode.css' : 'assets/css/colorDarkMode.css'">
+
+    <link rel="stylesheet" href="assets/css/colorLightMode.css" id="dark-mode" data-dark="assets/css/colorDarkMode.css" data-light="assets/css/colorLightMode.css">
+
     <!-- chooseTheme -->
 
     <link rel="stylesheet" href="assets/css/right-chat-container.css">
@@ -25,9 +28,14 @@
 
 </head>
 <body>
-<div class="main-wrapper">
+    <div class="main-wrapper">
+        
+        <div class="main" id="app">
 
-    <div class="main" id="app">
+            <!-- chooseTheme -->
+            <!-- <link rel="stylesheet" :href="lightTheme ?'assets/css/colorLightMode.css' : 'assets/css/colorDarkMode.css'"> -->
+            <!-- chooseTheme -->
+
         <!-- LEFT SIDE -->
         <div class="left-aside">
 
@@ -43,8 +51,8 @@
                     <!-- SLIDER DARKMODE -->
                     <div class="switch">
                         <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
-                            <div @click="lightTheme = !lightTheme, log()" class="slider round"></div>
+                            <input type="checkbox" id="checkbox">
+                            <div @click="changeTheme()" class="slider round"></div>
                         </label>
                     </div>
                     <!-- SLIDER DARKMODE -->
