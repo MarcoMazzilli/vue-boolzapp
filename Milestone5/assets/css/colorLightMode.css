@@ -6,7 +6,15 @@
     --sentMessage: rgb(213, 249, 186);
     --chatListBackground : white;
     --nameColor : black;
+    --notificationBackground: rgb(142, 218, 252);
+    --hoverIcons : white;
 }
+
+.main-wrapper {
+    background: rgb(217,219,212);
+    background: linear-gradient(0deg, rgba(217,219,212,1) 85%, rgba(0,150,136,1) 85%);
+}
+
 
 .conversation-container {
     background-image: url(../img/mine.jpg);

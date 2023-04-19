@@ -35,10 +35,15 @@
    color: var(--accentLightGrey);
 }
 
+.personal-info .icons-container i:hover{
+   color: var(--hoverIcons);
+   transform: scale(1.1);
+}
+
 /****** TOGGLE MESSAGE NOTIFICATION ******/
 .toggle-message-notification{
    height: 80px;
-   background-color:rgb(142, 218, 252);
+   background-color:var(--notificationBackground);
    display: flex;
    align-items: center;
    padding: 10px;
@@ -56,7 +61,7 @@
 
 .toggle-message-notification .notification-bell-icon i {
    font-size: 1.3rem;
-   color: rgb(142, 218, 252);
+   color: var(--notificationBackground);
    padding: 12px;
 }
 

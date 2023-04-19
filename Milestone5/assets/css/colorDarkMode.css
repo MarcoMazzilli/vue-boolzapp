@@ -6,6 +6,13 @@
     --sentMessage:rgb(0, 150, 136);
     --chatListBackground : rgb(17, 30, 39);
     --nameColor :  white;
+    --notificationBackground: rgb(92, 141, 163);
+    --hoverIcons : white;
+}
+
+.main-wrapper {
+    background: rgb(217,219,212);
+    background: linear-gradient(0deg, rgb(14, 14, 14) 85%, rgba(0,150,136,1) 85%);
 }
 
 .conversation-container {
