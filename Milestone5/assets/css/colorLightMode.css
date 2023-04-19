@@ -1,0 +1,13 @@
+:root {
+    --mainLightGrey : rgb(234, 234, 234);
+    --accentLightGrey : rgb(177, 177, 177);
+    --smallText : gray ;
+    --recivedMessage:rgb(255, 255, 255);
+    --sentMessage: rgb(213, 249, 186);
+    --chatListBackground : white;
+    --nameColor : black;
+}
+
+.conversation-container {
+    background-image: url(../img/mine.jpg);
+}

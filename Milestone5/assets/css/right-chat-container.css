@@ -3,7 +3,7 @@
   /**** CONTACT INFO ****/
 .contact-info{
     height: 70px;
-    background-color: rgb(234, 234, 234);
+    background-color: var(--mainLightGrey);
     display: flex;
 }
 
@@ -25,8 +25,13 @@
     flex-grow: 1;
 }
 
+.contact-info .user-info span:first-child{
+    color: var(--nameColor);
+    font-weight: 600;
+}
+
 .contact-info .user-info span:last-child {
-    color: grey;
+    color: var(--smallText);
     font-size: .9rem;
 }
 
@@ -42,7 +47,7 @@
 
 .contact-info .icons-container i{
     font-size: 1.5rem;
-    color: rgb(177, 177, 177);
+    color: var(--accentLightGrey);
 }
 
 /********************
@@ -50,14 +55,14 @@
  ********************/
 .conversation-container{
     height: calc(100% - (70px + 70px));
-    background-image: url(../img/mine.jpg);
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    background-color: var(--chatListBackground);
 }
 
 .conversation-container .message {
-    background-color: rgb(255, 255, 255);
+    background-color:var(--recivedMessage);
     margin: 10px 50px;
     padding: 15px;
     padding-bottom: 5px;
@@ -66,18 +71,21 @@
     position: relative;
     min-width: 300px;
     word-wrap: break-word;
+    color: var(--nameColor);
+    box-shadow: 1px 1px 3px rgba(200, 200, 200, .5);
 }
 
 .conversation-container .message.sent{
-    background-color: rgb(213, 249, 186);
+    background-color: var(--sentMessage);
     align-self: flex-end;
+    box-shadow: -1px 1px 3px rgba(200, 200, 200, .5);
 }
 
 .conversation-container .message-date {
     display: block;
     text-align: end;
     font-size: .7rem;
-    color: gray;
+    color: var(--smallText);
 }
 
 .conversation-container .message-date > span {
@@ -90,10 +98,10 @@
 
 @keyframes changeColor {
     0% {
-        color : grey
+        color : var(--smallText);
     }
     100% {
-        color: grey;
+        color: var(--smallText);
     }
 }
 /* DROPDOWN MENU */
@@ -102,7 +110,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    color: grey;
+    color: var(--smallText);
     cursor: pointer;
 }
 
@@ -111,7 +119,7 @@
 }
 
 .conversation-container .message .dropdown-menu li:hover {
-    background-color: rgb(234, 234, 234);
+    background-color: var(--mainLightGrey);
 }
 
 
@@ -121,7 +129,7 @@
  *****************/
 .send-message-section{
     height: 70px;
-    background-color: rgb(243, 238, 234);
+    background-color: var(--mainLightGrey);
     display: flex;
 }
 
@@ -134,7 +142,7 @@
 
 .send-message-section .message-icon i {
     font-size: 1.5rem;
-    color: grey;
+    color: var(--smallText);
 }
 
 .send-message-section .message-icon:first-child i:hover {
