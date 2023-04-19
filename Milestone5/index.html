@@ -32,10 +32,6 @@
         
         <div class="main" id="app">
 
-            <!-- chooseTheme -->
-            <!-- <link rel="stylesheet" :href="lightTheme ?'assets/css/colorLightMode.css' : 'assets/css/colorDarkMode.css'"> -->
-            <!-- chooseTheme -->
-
         <!-- LEFT SIDE -->
         <div class="left-aside">
 
@@ -58,7 +54,16 @@
                     <!-- SLIDER DARKMODE -->
                     
                     <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    <!-- CHANGE BACKGROUND -->
+                    <i @click="showThumbs = !showThumbs" class="fa-solid fa-images">
+                        <div v-show="showThumbs" class="container-thumb">
+                            <img v-for="(img,index) in backgroundArray " :src="img" @click="counterBackground = index,changeBackground()">
+                        </div>
+
+                    </i>
+                    <!-- CHANGE BACKGROUND -->
+
                 </div>
             </div>
 
@@ -128,7 +133,7 @@
                 <div class="icons-container">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
                 </div>
 
             </div>

@@ -14,6 +14,14 @@ createApp({
         letterToSearch:"",
         lightTheme : true,
         counterBackground : 0,
+        showThumbs : false,
+        backgroundArray :[
+            "assets/img/mine.jpg",
+            "assets/img/mineDark.jpg",
+            "assets/img/travel.jpg",
+            "assets/img/paint.jpg",
+            "assets/img/rain.gif",
+        ]
         }
     },
     methods:{
@@ -63,13 +71,23 @@ createApp({
 
                     contact.visible = contact.ContactName.toUpperCase().includes(this.letterToSearch.toUpperCase())
 
-                console.warn(this.letterToSearch)
+                // console.warn(this.letterToSearch)
             })
         },
 
         deleteMessage(i){
             this.contactsArray[this.clickedThumb].messages.splice( i , 1)
-        }
+        },
+
+
+    changeBackground(){
+        const bgChange = document.querySelector(".conversation-container");
+        bgChange.style.backgroundImage = `url(${this.backgroundArray[this.counterBackground]})`;
+
+    },
+
+    log(){
+    }
     },
 
 }).mount('#app')

@@ -8,6 +8,8 @@
     --nameColor : black;
     --notificationBackground: rgb(142, 218, 252);
     --hoverIcons : white;
+    --thumbsBackground: black;
+    --thumbsBorder: white ;
 }
 
 .main-wrapper {
@@ -18,4 +20,6 @@
 
 .conversation-container {
     background-image: url(../img/mine.jpg);
+    background-position: center;
+    background-size: cover;
 }

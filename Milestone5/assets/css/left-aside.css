@@ -28,6 +28,7 @@
    justify-content: flex-end;
    align-items: center;
    gap: 20px;
+   position: relative;
 }
 
 .personal-info .icons-container i {
@@ -37,8 +38,31 @@
 
 .personal-info .icons-container i:hover{
    color: var(--hoverIcons);
-   transform: scale(1.1);
+
 }
+
+/****** CHANGE BACKGROUND ******/
+
+.personal-info .icons-container .container-thumb {
+   background-color: white;
+   position: absolute;
+   right: -105px;
+   display: flex;
+   flex-direction: column;
+   z-index: 5;
+   box-shadow: 1px 1px 5px black;
+   border-radius: 0px 10px 10px 10px;
+   overflow: hidden;
+
+
+}
+
+.personal-info .icons-container .container-thumb img{
+   width: 100px;
+   aspect-ratio: 4/3 ;
+   margin: 5px 5px;
+}
+
 
 /****** TOGGLE MESSAGE NOTIFICATION ******/
 .toggle-message-notification{
