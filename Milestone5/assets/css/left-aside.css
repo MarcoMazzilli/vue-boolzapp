@@ -110,8 +110,9 @@
    overflow-y: scroll;
 }
 
-.conversation-list li {
+.conversation-list ul {
    list-style: none;
+   padding: 0;
 }
 
 .conversation-list .user-tab {
@@ -135,11 +136,11 @@
    flex-direction: column;
 }
 
-.conversation-list .user-tab .user-info span:first-child{
+.conversation-list .user-tab .user-info #contact-name{
    margin-bottom: 5px;
 }
 
-.conversation-list .user-tab .user-info span:last-child{
+.conversation-list .user-tab .user-info #contact-last-message{
    color: gray;
    font-size: .8rem;
    overflow: hidden;

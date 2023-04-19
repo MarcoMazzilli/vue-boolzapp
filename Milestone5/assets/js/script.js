@@ -60,7 +60,7 @@ createApp({
         },
 
         deleteMessage(i){
-            contactsArray[this.clickedThumb].messages.splice( i , 1)
+            this.contactsArray[this.clickedThumb].messages.splice( i , 1)
         }
     },
 

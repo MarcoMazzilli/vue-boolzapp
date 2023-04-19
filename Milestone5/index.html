@@ -73,8 +73,8 @@
                     </div>
                     <!-- info -->
                     <div class="user-info">
-                        <span>{{contact.ContactName}}</span>
-                        <span v-if="contact.messages.length > 0">{{contact.messages[contact.messages.length-1].textMessage}}</span>
+                        <span id="contact-name">{{contact.ContactName}}</span>
+                        <span id="contact-last-message" v-if="contact.messages.length > 0">{{contact.messages[contact.messages.length-1].textMessage}}</span>
                     </div>
                     <!-- last access -->
                     <div class="last-access">
@@ -128,7 +128,7 @@
 
                             <ul class="dropdown-menu">
                               <li>Info message</li>
-                              <li @click="deleteMessage(index)">Delete message</li>
+                              <li @click.stop="deleteMessage(index)">Delete message</li>
                             </ul>
 
 
