@@ -7,10 +7,13 @@
     <title>BoolzApp</title>
     <!-- STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/colorDarkMode.css">
-    <!-- <link rel="stylesheet" href="assets/css/colorLightMode.css"> -->
+    <!-- chooseTheme -->
+    <link rel="stylesheet" :href="lightTheme ?'assets/css/colorLightMode.css' : 'assets/css/colorDarkMode.css'">
+    <!-- chooseTheme -->
+
     <link rel="stylesheet" href="assets/css/right-chat-container.css">
     <link rel="stylesheet" href="assets/css/left-aside.css">
+    <link rel="stylesheet" href="assets/css/sliderDarkMode.css">
     <!-- ICONS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
     <!-- LUXON -->
@@ -34,8 +37,18 @@
                     <img class="avatar" src="assets/img/avatar_io.jpg" alt="">
                     <span>Sofia</span>
                 </div>
+                <!-- icons container -->
                 <div class="icons-container">
-                    <i class="fa-solid fa-circle-notch"></i>
+
+                    <!-- SLIDER DARKMODE -->
+                    <div class="switch">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div @click="lightTheme = !lightTheme, log()" class="slider round"></div>
+                        </label>
+                    </div>
+                    <!-- SLIDER DARKMODE -->
+                    
                     <i class="fa-solid fa-message"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>

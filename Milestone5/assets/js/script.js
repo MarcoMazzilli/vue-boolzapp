@@ -12,12 +12,13 @@ createApp({
         obj :{},
         newSentMessageInput :"",
         letterToSearch:"",
+        lightTheme : true,
         }
     },
     methods:{
 
         log(){
-            console.warn("warn")
+            console.warn(this.lightTheme)
         },
 
         changeTopBar(i){
