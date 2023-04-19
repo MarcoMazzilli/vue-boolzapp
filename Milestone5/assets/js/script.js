@@ -17,7 +17,7 @@ createApp({
     methods:{
 
         log(){
-            console.log(this.letterToSearch)
+            console.warn("warn")
         },
 
         changeTopBar(i){
@@ -57,6 +57,10 @@ createApp({
 
                 console.warn(this.letterToSearch)
             })
+        },
+
+        deleteMessage(i){
+            contactsArray[this.clickedThumb].messages.splice( i , 1)
         }
     },
 
