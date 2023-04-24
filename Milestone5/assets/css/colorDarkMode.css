@@ -1,6 +1,7 @@
 :root {
     --mainLightGrey : rgb(32, 45, 54);
     --accentLightGrey : rgb(177, 177, 177);
+    --hoverDropdown : rgb(218, 218, 218);
     --smallText : rgb(255, 255, 255) ;
     --recivedMessage:rgb(32, 45, 54);
     --sentMessage:rgb(0, 150, 136);
@@ -10,6 +11,7 @@
     --hoverIcons : white;
     --thumbsBackground: white;
     --thumbsBorder: black ;
+    --warnColor : rgb(250, 66, 66) ;
 }
 
 .main-wrapper {

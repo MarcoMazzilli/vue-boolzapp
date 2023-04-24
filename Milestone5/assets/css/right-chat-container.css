@@ -55,6 +55,33 @@
     transform: scale(1.1);
 }
 
+.contact-info .icons-container .dropdown-icon {
+    color: var(--smallText);
+    cursor: pointer;
+}
+
+.contact-info .icons-container .dropdown-menu {
+    left: -195px !important;
+    width: 200px;
+    padding: 5px;
+}
+
+.contact-info .icons-container .dropdown-menu li {
+    padding: 10px !important;
+}
+
+.contact-info .icons-container .dropdown-menu li:hover {
+    background-color: var(--hoverDropdown);
+    border-radius: 10px;
+}
+
+.contact-info .icons-container .dropdown-menu li:last-child:hover {
+    color: var(--warnColor);
+}
+
+.contact-info .icons-container .dropdown-icon i:hover {
+    color: var(--warnColor);
+}
 /********************
  CONVERSATION CONTAINER 
  ********************/
@@ -118,12 +145,17 @@
     cursor: pointer;
 }
 
+.conversation-container .message .dropdown-menu {
+    padding: 5px;
+}
+
 .conversation-container .message .dropdown-menu li {
     padding: 10px !important;
+    border-radius: 10px;
 }
 
 .conversation-container .message .dropdown-menu li:hover {
-    background-color: var(--accentLightGrey);
+    background-color: var(--hoverDropdown);
 }
 
 

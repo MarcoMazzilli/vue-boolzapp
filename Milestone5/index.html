@@ -86,7 +86,6 @@
                 <div class="search-input">
                     <input v-model="letterToSearch" type="text" placeholder="Cerca o inizia una nuova chat " @keyup="searchUser()">
                 </div>
-
             </div>
 
             <!-- conversation-list -->
@@ -109,9 +108,7 @@
                         <span v-if="contact.messages.length > 0">{{contact.messages[0].date.dayDate}} {{contact.messages[0].date.dayTime}}</span>
                     </div>
                   </div>
-                </li>
-
-                
+                </li>                
             </ul>
             </div>
         </div>
@@ -133,7 +130,14 @@
                 <div class="icons-container">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis"></i>
+                    <!-- dropdown menu -->
+                    <div class="dropdown-icon" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-trash"></i>
+                        <ul class="dropdown-menu">
+                            <li @click="deleteChat()">Delete Chat</li>
+                            <li @click="deleteConversation()">Delete conversation</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -151,16 +155,14 @@
                         {{messaggio.date.dayTime}} 
                         <span>&check;&check;</span>
                     </span>
+
                     <!-- dropdown -->
                     <div class="dropdown-icon" data-bs-toggle="dropdown">
                         <i class="fa-solid fa-angle-down"></i>
-
-                            <ul class="dropdown-menu">
-                              <li>Info message</li>
-                              <li @click.stop="deleteMessage(index)">Delete message</li>
-                            </ul>
-
-
+                        <ul class="dropdown-menu">
+                            <li>Info message</li>
+                            <li @click.stop="deleteMessage(index)">Delete message</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -182,7 +184,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 
