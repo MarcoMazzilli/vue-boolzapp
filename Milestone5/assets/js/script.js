@@ -9,13 +9,13 @@ createApp({
         return {
             contactsArray,
             clickedThumb: 0,
-            obj :{},
-            newSentMessageInput :"",
-            letterToSearch:"",
-            lightTheme : true,
-            counterBackground : 0,
-            showThumbs : false,
-            backgroundArray :[
+            obj: {},
+            newSentMessageInput: "",
+            letterToSearch: "",
+            lightTheme: true,
+            counterBackground: 0,
+            showThumbs: false,
+            backgroundArray: [
                 "assets/img/mine.jpg",
                 "assets/img/mineDark.jpg",
                 "assets/img/travel.jpg",
@@ -45,8 +45,8 @@ createApp({
 
             this.obj = {
                 date: {
-                    dayDate :"", 
-                    dayTime :dt.now().toFormat('HH'+':'+'mm')
+                    dayDate: "",
+                    dayTime: dt.now().toFormat('HH' + ':' + 'mm')
                 },
                 textMessage: this.newSentMessageInput,
                 status: 'sent'
@@ -56,44 +56,66 @@ createApp({
             this.newSentMessageInput = "";
 
             //auto answer
-           setTimeout(() => {
-            this.obj = {
-                date: {
-                    dayDate :"", 
-                    dayTime :dt.now().toFormat('HH'+':'+'mm')
-                },
-                textMessage: "ok",
-                status: 'recived'
-            }
-            this.contactsArray[this.clickedThumb].messages.push(this.obj)
-           }, 2000);
+            setTimeout(() => {
+                this.obj = {
+                    date: {
+                        dayDate: "",
+                        dayTime: dt.now().toFormat('HH' + ':' + 'mm')
+                    },
+                    textMessage: "ok",
+                    status: 'recived'
+                }
+                this.contactsArray[this.clickedThumb].messages.push(this.obj)
+                showNotification('Perfetto')
+            }, 2000);
             console.log(this.contactsArray[this.clickedThumb]);
         },
 
-        searchUser(){
+        searchUser() {
             this.contactsArray.forEach(contact => {
                 contact.visible = contact.ContactName.toUpperCase().includes(this.letterToSearch.toUpperCase())
             })
         },
 
-        deleteMessage(i){
-            this.contactsArray[this.clickedThumb].messages.splice( i , 1)
+        deleteMessage(i) {
+            this.contactsArray[this.clickedThumb].messages.splice(i, 1)
         },
 
-        changeBackground(){
+        changeBackground() {
             const bgChange = document.querySelector(".conversation-container");
             bgChange.style.backgroundImage = `url(${this.backgroundArray[this.counterBackground]})`;
 
         },
 
-        deleteChat(){
+        deleteChat() {
             this.contactsArray[this.clickedThumb].messages = []
         },
 
-        deleteConversation(){
+        deleteConversation() {
             this.contactsArray.splice(this.clickedThumb, 1)
         }
 
     },
 
 }).mount('#app');
+
+function showNotification(message) {
+    Notification.requestPermission().then(function (permission) {
+        if (permission === "granted") {
+            const options = {
+                body: message,
+                icon: "path/to/logo.png",
+                image: "path/to/image.png"
+            };
+            const notification = new Notification("Nuovo messaggio in arrivo", options);
+            notification.onclick = function () {
+                console.log("La notifica è stata cliccata");
+            };
+        }
+    });
+}
+
+
+
+
+
